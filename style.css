@@ -1,0 +1,251 @@
+:root{
+    --pri: #777C6D;
+    --sec: #B6CEB4;
+    --tri1: #bdb76b;
+    --tri2: #f6f3b7;
+}
+@font-face {
+    font-family: normal;
+    src: url(./fonnts.com-Aeonik-Regular.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(./fonnts.com-Aeonik-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: var(--pri);
+}
+/* nav{
+    width: 100%;
+    height: 50px;
+    background-color: var(--sec);
+    position: fixed;
+} */
+section.allElems{
+    height: 100%;
+    width: 100%;
+    background-color: var(--pri);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 50px 30px;
+    position: absolute;
+}
+section .elems{
+    height: 330px;
+    width: 250px;
+    background-color: var(--tri2);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    font-family: normal;
+    color: white;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.elems:active{
+    scale: 0.97;
+}
+
+.elems img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elems h2{
+    bottom: 5%;
+    right: 10%;
+    position: absolute;
+    font-weight: 400;
+}
+section.fullElems{
+    height: 100%;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 40px;
+    display: none;
+    position: absolute;
+}
+section.fullElems h1{
+    font-family: bold;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+section.fullElems .back{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(244, 51, 51);
+    color: white;
+    font-family: normal;
+    font-weight: 500;
+    font-size: large;
+    cursor: pointer;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    position: absolute;
+    right: 5%;
+}
+.back:active{
+    scale: 0.97;
+}
+section.to-do-list-full-page .to-do-container{
+    height: 90%;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section.to-do-list-full-page .to-do-container .addTask{
+    height: 100%;
+    width: 35%;
+    background-color: var(--sec);
+    border-radius: 10px;
+}
+section.to-do-list-full-page .to-do-container .addTask form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.addTask form input{
+    padding: 15px 15px;
+    font-family: normal;
+    font-size: larger;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: var(--tri2);
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+.addTask form textarea{
+    padding: 15px 15px;
+    font-family: normal;
+    font-size: larger;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: var(--tri2);
+    color: rgb(0, 0, 0);
+    outline: none;
+    height: 60%;
+}
+.addTask form button{
+    padding: 15px 7px;
+    font-family: normal;
+    font-size: larger;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(83, 248, 83);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.addTask form button:active{
+    scale: 0.97;
+}
+.addTask form button:hover{
+    border: 1px solid green;
+    background-color: rgba(4, 192, 4, 0.45);
+    box-shadow: 0 0 10px green;
+}
+section.to-do-list-full-page .to-do-container .showTask{
+    height: 100%;
+    width: 63%;
+    background-color: var(--sec);
+    border-radius: 10px;
+    padding: 30px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.task{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: var(--tri2);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.task h2{
+    font-family: bold;
+}
+.task button{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-weight: normal;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.task button:active{
+    scale: 0.97;
+}
+.task button:hover{
+    border: 1px solid green;
+    box-shadow: 0 0 10px green;
+}
+
+.daily-planner-full-page h1{
+    font-size: 60px;
+    font-family: normal;
+}
+.daily-planner-full-page .day-planner{
+    height: 85%;
+    width: 100%;
+    margin-top: 40px;
+    background-color: var(--sec);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: auto;
+    justify-content: space-between;
+
+}
+.daily-planner-full-page .day-planner .day-planner-time{
+    position: relative;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.day-planner .day-planner-time p{
+    position: absolute;
+    top: 5%;
+    left: 1%;
+}
+.day-planner-time input{
+    padding: 20px 40px;
+    padding-top: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background-color: var(--tri2);
+}
