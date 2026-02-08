@@ -1,31 +1,37 @@
-:root{
-    --pri: #777C6D;
-    --sec: #B6CEB4;
-    --tri1: #bdb76b;
-    --tri2: #f6f3b7;
+:root {
+  --pri: #777c6d;
+  --sec: #b6ceb4;
+  --tri1: #bdb76b;
+  --tri2: #f6f3b7;
 }
 @font-face {
-    font-family: normal;
-    src: url(./fonnts.com-Aeonik-Regular.ttf);
+  font-family: normal;
+  src: url(./fonnts.com-Aeonik-Regular.ttf);
 }
 @font-face {
-    font-family: bold;
-    src: url(./fonnts.com-Aeonik-Bold.ttf);
+  font-family: bold;
+  src: url(./fonnts.com-Aeonik-Bold.ttf);
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html , body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-.main{
-    height: 100%;
-    width: 100%;
-    background-color: var(--pri);
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--pri);
 }
 /* nav{
     width: 100%;
@@ -33,219 +39,534 @@ html , body{
     background-color: var(--sec);
     position: fixed;
 } */
-section.allElems{
-    height: 100%;
-    width: 100%;
-    background-color: var(--pri);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 5px;
-    padding: 50px 30px;
-    position: absolute;
+.full-weather-page {
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  background-position: center;
+  background-color: var(--sec);
 }
-section .elems{
-    height: 330px;
-    width: 250px;
-    background-color: var(--tri2);
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    font-family: normal;
-    color: white;
-    cursor: pointer;
-    transition: all 0.1s ease;
+.full-weather-page .weather-page1 {
+  height: 50%;
+  width: 50%;
+  border-radius: 20px;
+  background-image: url(https://images.unsplash.com/photo-1462524500090-89443873e2b4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: bottom;
+  background-size: cover;
+  box-shadow: 10px 10px 10px 10px black;
 }
-.elems:active{
-    scale: 0.97;
+.weather-page1 .day-place {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0 30px 20px;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px black;
+  display: flex;
+  flex-direction: column;
 }
-
-.elems img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.day h2 {
+  font-size: 30px;
 }
-.elems h2{
-    bottom: 5%;
-    right: 10%;
-    position: absolute;
-    font-weight: 400;
+.day h1 {
+  font-size: 60px;
 }
-section.fullElems{
-    height: 100%;
-    width: 100%;
-    background-color: var(--pri);
-    padding: 40px;
-    display: none;
-    position: absolute;
-}
-section.fullElems h1{
-    font-family: bold;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-}
-section.fullElems .back{
-    height: 40px;
-    width: 100px;
-    background-color: rgb(244, 51, 51);
-    color: white;
-    font-family: normal;
-    font-weight: 500;
-    font-size: large;
-    cursor: pointer;
-    border: 2px solid rgb(255, 0, 0);
-    border-radius: 10px;
-    position: absolute;
-    right: 5%;
-}
-.back:active{
-    scale: 0.97;
-}
-section.to-do-list-full-page .to-do-container{
-    height: 90%;
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-section.to-do-list-full-page .to-do-container .addTask{
-    height: 100%;
-    width: 35%;
-    background-color: var(--sec);
-    border-radius: 10px;
-}
-section.to-do-list-full-page .to-do-container .addTask form{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-}
-.addTask form input{
-    padding: 15px 15px;
-    font-family: normal;
-    font-size: larger;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: var(--tri2);
-    color: rgb(0, 0, 0);
-    outline: none;
-}
-.addTask form textarea{
-    padding: 15px 15px;
-    font-family: normal;
-    font-size: larger;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: var(--tri2);
-    color: rgb(0, 0, 0);
-    outline: none;
-    height: 60%;
-}
-.addTask form button{
-    padding: 15px 7px;
-    font-family: normal;
-    font-size: larger;
-    font-weight: 600;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: rgb(83, 248, 83);
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.addTask form button:active{
-    scale: 0.97;
-}
-.addTask form button:hover{
-    border: 1px solid green;
-    background-color: rgba(4, 192, 4, 0.45);
-    box-shadow: 0 0 10px green;
-}
-section.to-do-list-full-page .to-do-container .showTask{
-    height: 100%;
-    width: 63%;
-    background-color: var(--sec);
-    border-radius: 10px;
-    padding: 30px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.task{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    background-color: var(--tri2);
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-.task h2{
-    font-family: bold;
-}
-.task button{
-    padding: 10px 25px;
-    border: none;
-    border-radius: 10px;
-    background-color: green;
-    color: white;
-    font-weight: normal;
-    font-size: large;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.task button:active{
-    scale: 0.97;
-}
-.task button:hover{
-    border: 1px solid green;
-    box-shadow: 0 0 10px green;
+.place h1 {
+  margin-top: 30px;
+  font-size: 50px;
+  width: 100%;
 }
 
-.daily-planner-full-page h1{
-    font-size: 60px;
-    font-family: normal;
+.full-weather-page .weather-page2 {
+  height: 50%;
+  width: 50%;
+  border-radius: 20px;
+  background-image: url(./sunnyweather.jpg);
+  background-position: bottom;
+  background-size: cover;
+  box-shadow: 10px 10px 10px 10px black;
 }
-.daily-planner-full-page .day-planner{
-    height: 85%;
-    width: 100%;
-    margin-top: 40px;
-    background-color: var(--sec);
-    border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    overflow: auto;
-    justify-content: space-between;
+.weather-page2 .temp-humi {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px black;
+}
+.temp h1 {
+  font-size: 50px;
+}
+.temp h2 {
+  font-size: 35px;
+}
+.humi {
+  margin-top: 30px;
+}
+.humi h3 {
+  margin-top: 5px;
+  font-size: 20px;
+  text-shadow: 3px 3px 2px black;
+  width: fit-content;
+}
 
+section.allElems {
+  height: 100%;
+  width: 100%;
+  background-color: var(--pri);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 30px 30px;
+  position: absolute;
 }
-.daily-planner-full-page .day-planner .day-planner-time{
-    position: relative;
-    width: 49%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+section .elems {
+  height: 330px;
+  width: 250px;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  font-family: normal;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s linear;
 }
-.day-planner .day-planner-time p{
-    position: absolute;
-    top: 5%;
-    left: 1%;
+.elems:hover {
+  transform: scale(1.1) translateY(-5%);
 }
-.day-planner-time input{
-    padding: 20px 40px;
-    padding-top: 30px;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    outline: none;
-    background-color: var(--tri2);
+
+.elems img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.elems h2 {
+  bottom: 5%;
+  right: 10%;
+  position: absolute;
+  font-weight: 400;
+}
+section.fullElems {
+  height: 100%;
+  width: 100%;
+  background-color: var(--pri);
+  padding: 40px;
+  display: none;
+  position: absolute;
+}
+section.fullElems h1 {
+  font-family: bold;
+  font-weight: 500;
+  /* color: rgb(255, 255, 255); */
+}
+section.fullElems .back {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(244, 51, 51);
+  color: white;
+  font-family: normal;
+  font-weight: 500;
+  font-size: large;
+  cursor: pointer;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  position: absolute;
+  right: 5%;
+}
+.back:active {
+  scale: 0.97;
+}
+section.to-do-list-full-page .to-do-container {
+  height: 90%;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.to-do-list-full-page .to-do-container .addTask {
+  height: 100%;
+  width: 35%;
+  background-color: var(--sec);
+  border-radius: 10px;
+}
+section.to-do-list-full-page .to-do-container .addTask form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.addTask form input {
+  padding: 15px 15px;
+  font-family: normal;
+  font-size: larger;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: var(--tri2);
+  color: rgb(0, 0, 0);
+  outline: none;
+}
+.addTask form textarea {
+  padding: 15px 15px;
+  font-family: normal;
+  font-size: larger;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: var(--tri2);
+  color: rgb(0, 0, 0);
+  outline: none;
+  height: 60%;
+}
+.addTask form button {
+  padding: 15px 7px;
+  font-family: normal;
+  font-size: larger;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(83, 248, 83);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.addTask form button:active {
+  scale: 0.97;
+}
+.addTask form button:hover {
+  border: 1px solid green;
+  background-color: rgba(4, 192, 4, 0.45);
+  box-shadow: 0 0 10px green;
+}
+section.to-do-list-full-page .to-do-container .showTask {
+  height: 100%;
+  width: 63%;
+  background-color: var(--sec);
+  border-radius: 10px;
+  padding: 30px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: var(--tri2);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.task h2 {
+  font-family: bold;
+}
+.task button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-weight: normal;
+  font-size: large;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.task button:active {
+  scale: 0.97;
+}
+.task button:hover {
+  border: 1px solid green;
+  box-shadow: 0 0 10px green;
+}
+
+.daily-planner-full-page h1 {
+  font-size: 60px;
+  font-family: normal;
+}
+.daily-planner-full-page .day-planner {
+  height: 85%;
+  width: 100%;
+  margin-top: 40px;
+  background-color: var(--sec);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: auto;
+  justify-content: space-between;
+}
+.daily-planner-full-page .day-planner .day-planner-time {
+  position: relative;
+  width: 49%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.day-planner .day-planner-time p {
+  position: absolute;
+  top: 5%;
+  left: 1%;
+}
+.day-planner-time input {
+  padding: 20px 40px;
+  padding-top: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  outline: none;
+  background-color: var(--tri2);
+}
+section.fullElems.motivation-full-page {
+  height: 100%;
+  width: 100%;
+  background: var(--sec);
+}
+.motivation-full-page .motivation-full-content {
+  height: 95%;
+  width: 100%;
+  margin-top: 50px;
+  background: linear-gradient(rgba(239, 47, 47, 0.591));
+  box-shadow: 0 0 10px rgb(6, 6, 6);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 40px;
+  font-family: sans-serif;
+}
+.motivation-full-content .motivation-heading {
+  padding: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.397);
+  border-radius: 10px;
+}
+.motivation-full-content .motivation-desc {
+  width: 50%;
+  padding: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  background: linear-gradient(rgb(255, 0, 0), rgba(0, 0, 0, 0.836));
+  box-shadow: 30px 30px 30px rgb(0, 0, 0);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.motivation-desc h2 {
+  color: whitesmoke;
+}
+.motivation-desc h1 {
+  margin-top: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.425);
+  border-radius: 10px;
+  background-color: #aaff0063;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+section.fullElems.fomodoro-timer-full-page {
+  height: 100%;
+  width: 100%;
+}
+.fomodoro-timer-full-page .fomodoro-full-page-content {
+  height: 95%;
+  width: 100%;
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(249, 203, 231);
+  box-shadow: 0 0 20px white;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  font-family: sans-serif;
+}
+.fomodoro-full-page-content .fomo-timer .session {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  background-color: #60d448;
+  padding: 10px 20px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+.fomodoro-full-page-content .fomo-timer h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+}
+.fomodoro-full-page-content .fomo-all-buttons {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+.fomo-all-buttons .start {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: rgb(254, 52, 120);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 6px 0 black;
+  color: white;
+  font-size: 25px;
+  transition: all 0.1s linear;
+}
+.fomo-all-buttons .start:active {
+  box-shadow: 0 0 0 black;
+  scale: 0.97;
+}
+.fomo-all-buttons .pause {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: rgb(254, 52, 120);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 6px 0 black;
+  color: white;
+  font-size: 25px;
+  transition: all 0.1s linear;
+}
+.fomo-all-buttons .pause:active {
+  box-shadow: 0 0 0 black;
+  scale: 0.97;
+}
+.fomo-all-buttons .reset {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: rgb(254, 52, 120);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 6px 0 black;
+  color: white;
+  font-size: 25px;
+  transition: all 0.1s linear;
+}
+.fomo-all-buttons .reset:active {
+  box-shadow: 0 0 0 black;
+  scale: 0.97;
+}
+section.fullElems.daily-goals-full-page {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+.daily-goals-full-page .daily-goals-container {
+  height: 95%;
+  width: 100%;
+  margin-top: 50px;
+  background-color: var(--sec);
+  box-shadow: 0 0 10px white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.daily-goals-container .daily-goals-content {
+  width: 28%;
+  height: 84%;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.347);
+  box-shadow: 10px 10px 20px black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.daily-goals-content .heading {
+  width: 100%;
+  background-color: var(--tri2);
+  padding: 5px;
+  text-align: center;
+}
+.daily-goals-content .daily-goals-form {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.041);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.daily-goals-form form input {
+  padding: 5px 10px;
+  outline: none;
+  width: 70%;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.454);
+  border-radius: 5px;
+  font-size: 15px;
+}
+.daily-goals-form form button {
+  padding: 12px 6px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ddff00;
+  box-shadow: 3px 3px 0 black;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.daily-goals-form form button:active {
+  scale: 0.97;
+  box-shadow: 0 0 0 black;
+}
+.daily-goals-content .show-daily-goals {
+  width: 100%;
+  height: 75%;
+  overflow: auto;
+  margin-top: 20px;
+  background-color: rgba(247, 221, 221, 0.82);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.show-daily-goals .showgoals {
+  display: flex;
+}
+.show-daily-goals h2 {
+  width: 75%;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.493);
+  border-radius: 5px;
+  padding: 5px;
+}
+.show-daily-goals button {
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  background-color: #45fa21;
+  box-shadow: 3px 3px 0 black;
+  margin-left: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.show-daily-goals button:active {
+  scale: 0.97;
+  box-shadow: 0 0 0 black;
 }

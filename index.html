@@ -1,88 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main">
+      <div class="full-weather-page">
+        <div class="weather-page1">
+          <div class="day-place">
+            <div class="day">
+              <h2>08-02-2026</h2>
+              <h1>Sunday, 01:17:30 PM</h1>
+            </div>
+            <div class="place">
+              <h1>Patna</h1>
+            </div>
+          </div>
+        </div>
+        <div class="weather-page2">
+          <div class="temp-humi">
+            <div class="temp">
+              <h1>30°C</h1>
+              <h2>Sunny</h2>
+            </div>
+            <div class="humi">
+              <h3 class="heat">Heat Index:30%</h3>
+              <h3 class="humidity">Humidity:30%</h3>
+              <h3 class="speed">Wind:30 km/h</h3>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="full-element-pages">
         <section class="allElems">
+          <div class="todo elems" id="0">
+            <img
+              src="https://images.unsplash.com/photo-1752606402425-fa8ed3166a91?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>To Do List</h2>
+          </div>
 
-            <div class="todo elems" id="0">
-                <img src="https://images.unsplash.com/photo-1752606402425-fa8ed3166a91?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <h2>To Do List</h2>
-            </div>
+          <div class="daily elems" id="1">
+            <img
+              src="https://images.unsplash.com/photo-1760978631834-a8e470f5554a?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Daily Planner</h2>
+          </div>
 
-            <div class="daily elems" id="1">
-                <img src="https://images.unsplash.com/photo-1760978631834-a8e470f5554a?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <h2>Daily Planner</h2>
-            </div>
+          <div class="moti elems" id="2">
+            <img
+              src="https://images.unsplash.com/photo-1764105720554-695f1673fb50?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Motivation</h2>
+          </div>
 
-            <div class="moti elems" id="2">
-                <img src="https://images.unsplash.com/photo-1764105720554-695f1673fb50?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <h2>Motivation</h2>
-            </div>
+          <div class="fomo elems" id="3">
+            <img
+              src="https://images.unsplash.com/photo-1721414209360-7b8f669a1d8b?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Fomodoro Timer</h2>
+          </div>
 
-            <div class="fomo elems" id="3">
-                <img src="https://images.unsplash.com/photo-1721414209360-7b8f669a1d8b?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <h2>Fomodoro Timer</h2>
-            </div>
-
-            <div class="daily elems" id="4">
-                <img src="https://images.unsplash.com/photo-1761892464046-dd9ee385ae90?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <h2>Daily Goals</h2>
-            </div>
+          <div class="daily elems" id="4">
+            <img
+              src="https://images.unsplash.com/photo-1761892464046-dd9ee385ae90?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Daily Goals</h2>
+          </div>
         </section>
 
         <section class="fullElems to-do-list-full-page">
-            <button class="back" id="0">Back</button>
-            <h1>Your Personalized To-Do List</h1>
+          <button class="back" id="0">Back</button>
+          <h1>Your Personalized To-Do List</h1>
 
-            <div class="to-do-container">
-                <div class="addTask">
-                    <form>
-                        <input type="text" placeholder="Enter Task">
-                        <textarea name="" id="" placeholder="Enter task's Detail"></textarea>
-                        <button class="addTaskbtn">
-                            Add Task
-                        </button>
-                    </form>
-                </div>
-                <div class="showTask">
-                    
-                </div>
+          <div class="to-do-container">
+            <div class="addTask">
+              <form>
+                <input type="text" placeholder="Enter Task" />
+                <textarea
+                  name=""
+                  id=""
+                  placeholder="Enter task's Detail"
+                ></textarea>
+                <button class="addTaskbtn">Add Task</button>
+              </form>
             </div>
+            <div class="showTask"></div>
+          </div>
         </section>
 
         <section class="fullElems daily-planner-full-page">
-            <button class="back" id="1">Back</button>
-            <h1>Plan Your Day To Be More Productive</h1>
-            <div class="day-planner">
-                
-                <div class="day-planner-time">
-                </div>
-            </div>
+          <button class="back" id="1">Back</button>
+          <h1>Plan Your Day To Be More Productive</h1>
+          <div class="day-planner">
+            <div class="day-planner-time"></div>
+          </div>
         </section>
 
         <section class="fullElems motivation-full-page">
-            <button class="back" id="2">Back</button>
-            <h1>Motivation</h1>
+          <button class="back" id="2">Back</button>
+          <div class="motivation-full-content">
+            <div class="motivation-heading">
+              <h1>--- Motivational Quotes ---</h1>
+            </div>
+            <div class="motivation-desc">
+              <h2></h2>
+              <h1></h1>
+            </div>
+          </div>
         </section>
 
         <section class="fullElems fomodoro-timer-full-page">
-            <button class="back" id="3">Back</button>
-            <h1>Fomodoro Timer</h1>
+          <button class="back" id="3">Back</button>
+          <div class="fomodoro-full-page-content">
+            <div class="fomo-timer">
+              <h1>Fomodoro Timer</h1>
+              <p class="session">---Session Time---</p>
+              <h2>25:00</h2>
+            </div>
+            <div class="fomo-all-buttons">
+              <button class="start">START</button>
+              <button class="pause">PAUSE</button>
+              <button class="reset">RESET</button>
+            </div>
+          </div>
         </section>
 
         <section class="fullElems daily-goals-full-page">
-            <button class="back" id="4">Back</button>
-            <h1>Daily Goals</h1>
+          <button class="back" id="4">Back</button>
+          <div class="daily-goals-container">
+            <div class="daily-goals-content">
+              <div class="heading">
+                <h1>Daily Goals</h1>
+              </div>
+              <div class="daily-goals-form">
+                <form>
+                  <input type="text" placeholder="Add New Goal" />
+                  <button>ADD GOAL</button>
+                </form>
+                <div class="show-daily-goals">
+                  <div class="showgoals"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
