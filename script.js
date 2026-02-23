@@ -242,69 +242,67 @@ function dailyGoals() {
 
 dailyGoals();
 
-
-function landingPage(){
+function landingPage() {
   let apiKey = "75b704eea2ed4ad28db123436260702";
-let city = "Patna";
+  let city = "Patna";
 
-let temp = document.querySelector(".temp h1");
-let condition = document.querySelector(".temp h2");
-let heatindex = document.querySelector(".humi .heat");
-let humidity = document.querySelector(".humi .humidity");
-let speed = document.querySelector(".humi .speed");
+  let temp = document.querySelector(".temp h1");
+  let condition = document.querySelector(".temp h2");
+  let heatindex = document.querySelector(".humi .heat");
+  let humidity = document.querySelector(".humi .humidity");
+  let speed = document.querySelector(".humi .speed");
 
-async function apicall() {
-  let res = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`,
-  );
-  let data = await res.json();
-  console.log(data.current);
+  async function apicall() {
+    let res = await fetch(
+      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`,
+    );
+    let data = await res.json();
+    console.log(data.current);
 
-  temp.innerHTML = `${data.current.temp_c}°C`;
-  condition.innerHTML = `${data.current.condition.text}`;
-  heatindex.innerHTML = `Heat Index:${data.current.heatindex_c}%`;
-  humidity.innerHTML = `Humidity:${data.current.humidity}%`;
-  speed.innerHTML = `Wind Speed:${data.current.wind_kph}km/h`;
-}
-
-apicall();
-
-let weatherpage1date = document.querySelector(".day h2");
-let weatherpage1hours = document.querySelector(".day h1");
-
-let date = null;
-function timeDate() {
-  const totalDaysofWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  date = new Date();
-  let tarik = date.getDate();
-  let month = date.getMonth();
-  let year = date.getFullYear();
-  let day = totalDaysofWeek[date.getDay()];
-  let hours = date.getHours();
-  let min = date.getMinutes();
-  let sec = date.getSeconds();
-
-  weatherpage1date.innerHTML = `${String(tarik).padStart("2", "0")}-${String(month).padStart("2", "0")}-${String(year).padStart("2", "0")}`;
-
-  if (hours > 12) {
-    weatherpage1hours.innerHTML = `${day} , ${String(hours - 12).padStart("2", "0")}:${String(min).padStart("2", "0")}:${String(sec).padStart("2", "0")} PM`;
-  } else {
-    weatherpage1hours.innerHTML = `${day} , ${String(hours).padStart("2", "0")}:${String(min).padStart("2", "0")}:${String(sec).padStart("2", "0")} AM`;
+    temp.innerHTML = `${data.current.temp_c}°C`;
+    condition.innerHTML = `${data.current.condition.text}`;
+    heatindex.innerHTML = `Heat Index:${data.current.heatindex_c}%`;
+    humidity.innerHTML = `Humidity:${data.current.humidity}%`;
+    speed.innerHTML = `Wind Speed:${data.current.wind_kph}km/h`;
   }
+
+  apicall();
+
+  let weatherpage1date = document.querySelector(".day h2");
+  let weatherpage1hours = document.querySelector(".day h1");
+
+  let date = null;
+  function timeDate() {
+    const totalDaysofWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    date = new Date();
+    let tarik = date.getDate();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    let day = totalDaysofWeek[date.getDay()];
+    let hours = date.getHours();
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+
+    weatherpage1date.innerHTML = `${String(tarik).padStart("2", "0")}-${String(month).padStart("2", "0")}-${String(year).padStart("2", "0")}`;
+
+    if (hours > 12) {
+      weatherpage1hours.innerHTML = `${day} , ${String(hours - 12).padStart("2", "0")}:${String(min).padStart("2", "0")}:${String(sec).padStart("2", "0")} PM`;
+    } else {
+      weatherpage1hours.innerHTML = `${day} , ${String(hours).padStart("2", "0")}:${String(min).padStart("2", "0")}:${String(sec).padStart("2", "0")} AM`;
+    }
+  }
+
+  setInterval(() => {
+    timeDate();
+  }, 1000);
 }
 
-setInterval(() => {
-  timeDate();
-}, 1000);
-
-}
-
-landingPage()
+landingPage();

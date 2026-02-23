@@ -27,18 +27,13 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: rgb(45, 45, 45);
 }
 .main {
   height: 100%;
   width: 100%;
   background-color: var(--pri);
 }
-/* nav{
-    width: 100%;
-    height: 50px;
-    background-color: var(--sec);
-    position: fixed;
-} */
 .full-weather-page {
   height: 100%;
   width: 100%;
@@ -49,16 +44,17 @@ body {
   background-color: var(--sec);
 }
 .full-weather-page .weather-page1 {
-  height: 50%;
-  width: 50%;
+  width: 100%;
   border-radius: 20px;
-  background-image: url(https://images.unsplash.com/photo-1462524500090-89443873e2b4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: url(./beauty\ scene.jpg);
   background-position: bottom;
   background-size: cover;
-  box-shadow: 10px 10px 10px 10px black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 10px 20px black;
 }
 .weather-page1 .day-place {
-  width: 100%;
   height: 100%;
   padding: 40px 0 30px 20px;
   font-family: sans-serif;
@@ -79,17 +75,7 @@ body {
   width: 100%;
 }
 
-.full-weather-page .weather-page2 {
-  height: 50%;
-  width: 50%;
-  border-radius: 20px;
-  background-image: url(./sunnyweather.jpg);
-  background-position: bottom;
-  background-size: cover;
-  box-shadow: 10px 10px 10px 10px black;
-}
-.weather-page2 .temp-humi {
-  width: 100%;
+.temp-humi {
   height: 100%;
   padding: 40px;
   display: flex;
@@ -120,6 +106,7 @@ section.allElems {
   background-color: var(--pri);
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 5px;
   padding: 30px 30px;
