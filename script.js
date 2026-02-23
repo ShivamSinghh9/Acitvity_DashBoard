@@ -5,16 +5,18 @@ function openSource() {
 
   elems.forEach(function (elem) {
     elem.addEventListener("click", function () {
-      fullElems[elem.id].style.display = "block";
+      fullElems[elem.id].classList.add("active");
     });
   });
 
   backBtn.forEach(function (back) {
     back.addEventListener("click", function () {
-      fullElems[back.id].style.display = "none";
+      fullElems[back.id].classList.remove("active");
     });
   });
 }
+
+openSource();
 
 openSource();
 

@@ -99,8 +99,16 @@ body {
   text-shadow: 3px 3px 2px black;
   width: fit-content;
 }
+.full-element-pages {
+  position: relative;
+  min-height: 100vh;
+}
 
 section.allElems {
+
+  position: relative;
+  z-index: 1;
+
   height: 100%;
   width: 100%;
   background-color: var(--pri);
@@ -108,9 +116,8 @@ section.allElems {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
-  padding: 30px 30px;
-  position: absolute;
+  gap: 20px;
+  padding: 40px;
 }
 section .elems {
   height: 330px;
@@ -140,12 +147,29 @@ section .elems {
   font-weight: 400;
 }
 section.fullElems {
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   width: 100%;
+  height: 100%;
+
   background-color: var(--pri);
   padding: 40px;
-  display: none;
-  position: absolute;
+
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+
+  z-index: 5;
+}
+
+section.fullElems.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
 section.fullElems h1 {
   font-family: bold;
@@ -169,8 +193,11 @@ section.fullElems .back {
 .back:active {
   scale: 0.97;
 }
+section.to-do-list-full-page {
+  height: 100%;
+}
 section.to-do-list-full-page .to-do-container {
-  height: 90%;
+  height: 85%;
   width: 100%;
   margin-top: 30px;
   display: flex;
